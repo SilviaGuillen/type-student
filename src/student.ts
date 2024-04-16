@@ -19,7 +19,15 @@ const students: Student[]=[{
         lastname: "Sponge",
         age:11,
         grades: ["A",3,1,"B","*",2]
-    }]
+    },
+    {
+        firstname: "Maria",
+        lastname:"Kennedy",
+        age:11,
+        grades:[1,1,3,"*",2,"C"]
+
+    }
+    ]
 
 
 
@@ -29,6 +37,14 @@ function printStudents(student:Student) : void {
     console.log(student.grades.toString())
 }
 printStudents(students[1]);
+
+function printAllStudents(students: Student[]): void {
+    console.log("List of Students:");
+    students.forEach((student, index) => {
+        console.log(`\nStudent ${index + 1}:`);
+        printStudents(student);
+    });}
+printAllStudents(students);
 
 
 
